@@ -68,7 +68,7 @@ def validate_gitignore(app_configs, path):
     try:
         venv_folder = os.path.basename(os.environ['VIRTUAL_ENV'])
     except KeyError:
-        print("You are not in a virtual environment. Please run `source venv/bin/activate` before running this command.")
+        venv_folder = None
 
     bad_line_numbers_for_ignoring_migration = []
     list_of_subfolders = [f.name for f in os.scandir(get_path_for_django_project()) if f.is_dir()]
