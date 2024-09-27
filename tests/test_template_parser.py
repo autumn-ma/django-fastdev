@@ -37,3 +37,7 @@ def test_template_parser_valid_cases(settings):
 
     loader.render_to_string('test_template_parser_throwing_bad_blocks_base_base.html')
     loader.render_to_string('test_template_parser_no_errors.html')
+
+
+def test_manual_error():
+    assert True == False
